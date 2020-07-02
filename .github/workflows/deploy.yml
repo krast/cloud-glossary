@@ -51,7 +51,7 @@ jobs:
       with:
         hosts: ${{ secrets.REMOTE_HOST }}
         user: ${{ secrets.REMOTE_USER }}
-        private_key: ${{ secrets.PRIVATE_KEY }}
+        private_key: ${{ secrets.SERVER_SSH_KEY }}
         commands: |
           chown caddy:caddy -R ${{ secrets.REMOTE_TARGET }}
           chmod 755 -R  ${{ secrets.REMOTE_TARGET }}
