@@ -31,7 +31,7 @@ jobs:
       uses: CultureHQ/actions-yarn@master
       with:
         args: install
-    - name: Yarn Install
+    - name: Yarn Build
       uses: CultureHQ/actions-yarn@master
       with:
         args: docs:build
@@ -46,13 +46,12 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
 
-    - name: ssh pipelines
-      uses: cross-the-world/ssh-pipeline@master
+    - name: Execute SSH commmands on remote server
+      uses: JimCronqvist/action-ssh@master
       with:
-        host: ${{ secrets.REMOTE_HOST }}
-        user: ${{ secrets.REMOTE_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        connect_timeout: 10s
-        script: |
+        hosts: '${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}'
+        privateKey: ${{ secrets.PRIVATE_KEY }}
+        command: |
           chown caddy:caddy -R ${{ secrets.REMOTE_TARGET }}
-          mkdir /home/krast/test1
+          chmod 755 -R  ${{ secrets.REMOTE_TARGET }}
+
