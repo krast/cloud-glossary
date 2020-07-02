@@ -47,10 +47,11 @@ jobs:
           TARGET: ${{ secrets.REMOTE_TARGET }}
 
     - name: Execute SSH commmands on remote server
-      uses: JimCronqvist/action-ssh@master
+      uses: docker://evaneos/ssh-action:0.1.0
       with:
-        hosts: '${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}'
-        privateKey: ${{ secrets.PRIVATE_KEY }}
+        hosts: ${{ secrets.REMOTE_HOST }}
+        user: ${{ secrets.REMOTE_USER }}
+        private_key: ${{ secrets.PRIVATE_KEY }}
         command: |
           chown caddy:caddy -R ${{ secrets.REMOTE_TARGET }}
           chmod 755 -R  ${{ secrets.REMOTE_TARGET }}
