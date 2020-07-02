@@ -1,5 +1,5 @@
 ---
-title: 基础设施即服务 PaaS
+title: 平台即服务 PaaS
 date: 2020-07-02
 author: krast
 location: Shanghai  
