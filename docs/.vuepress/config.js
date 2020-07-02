@@ -2,6 +2,9 @@ module.exports = {
 	title: 'Cloud Glossary',
 	description: 'Just playing around',
 	theme: 'solarized',
+	head: [
+		['link', { rel: 'shortcut icon', type: "image/x-icon", href: `./favicon.ico` }]
+	],
 	globalUIComponents: ['ThemeManager'],
 	themeConfig: {
 		sidebar: [
