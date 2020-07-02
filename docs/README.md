@@ -10,16 +10,23 @@ location: Shanghai
 
 ## 国内云供应商
 
-- 腾讯云
-- 阿里云
-- 华为云
-- 百度云
+- [腾讯云][2]
+- [阿里云][3]
+- [华为云][4]
+- [百度云][5]
 
 ## 国外云供应商
 
-- AWS
-- Azure
-- GoogleCloud
+- [AWS][6]
+- [Azure][7]
+- [GoogleCloud][8]
 
 
 [1]: http://glossary.cfapps.io "cf-glossary"
+[2]: https://cloud.tencent.com "Tencent Cloud"
+[3]: https://www.aliyun.com "AliCloud"
+[4]: https://www.huaweicloud.com "Huawei Cloud"
+[5]: https://cloud.baidu.com "Baidu Cloud"
+[6]: http://aws.amazon.com "AWS"
+[7]: https://azure.microsoft.com "Azure"
+[8]: https://cloud.google.com "Google Cloud"
