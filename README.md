@@ -1,6 +1,6 @@
 # cloud-glossary
 
-![](https://img.shields.io/badge/cloud-glossary-blue)
+[![](https://img.shields.io/badge/cloud-glossary-blue)](https://cloud-glossary.gnerv.net/)
 
 受到[cf-glossary][1]启发，整理了一份云计算的术语表。
 
